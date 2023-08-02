@@ -11,7 +11,7 @@ def view_item():
    api_url = ('https://api.calorieninjas.com/v1/nutrition?query=')
    user_decision = input("What item do you want to know about")
 
-   api_request =  requests.get(api_url + user_decision, headers={'X-Api-Key':'CdoUIla7W14Tqq8aMxcjhw==LPa05B9XMMLGbnGL'} )
+   api_request =  requests.get(api_url + user_decision, headers={'X-Api-Key':'My_Key'} )
    if api_request.status_code == 200:
       calories = api_request.json()
       calories_request = calories["items"][0]["calories"]
